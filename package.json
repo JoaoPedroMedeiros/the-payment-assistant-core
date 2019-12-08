@@ -1,0 +1,29 @@
+{
+  "name": "the-payment-assistant-core",
+  "version": "1.0.0",
+  "description": "I don't want to manage bills anymore",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "mode:dev": "ts-node-dev --respawn --transpileOnly ./src/*",
+    "start": "node dist/app.js",
+    "build": "tsc",
+    "deploy": "tsc && gcloud app deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoPedroMedeiros/the-payment-assistant-core.git"
+  },
+  "author": "joao.medeiros",
+  "license": "ISC",
+  "homepage": "https://github.com/JoaoPedroMedeiros/the-payment-assistant-core#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "typescript": "^3.7.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^12.12.14"
+  }
+}
