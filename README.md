@@ -2,7 +2,7 @@
 This is the process flow
 ![Screenshot](documentation/flow-diagram.png "Title")
 
-# System inputs
+# API
 
 ## Endpoints
 ### [POST] /bills
@@ -25,6 +25,7 @@ This is the process flow
 ```
 {
     "id": "the new id",
+    "status": "PENDING",
     "description": "string",
     "barCode": "string",
     "tags": [
@@ -43,6 +44,7 @@ This is the process flow
 ```
 {
     "id": "the new id",
+    "status": "PENDING|PAID",
     "description": "string",
     "barCode": "string",
     "tags": [
@@ -62,6 +64,7 @@ This is the process flow
 [
     {
         "id": "the new id",
+        "status": "PENDING|PAID",
         "description": "string",
         "barCode": "string",
         "tags": [
@@ -89,6 +92,7 @@ This is the process flow
 ```
 {
     "id": "the paid bill id",
+    "status": "PAID",
     "description": "string",
     "barCode": "string",
     "tags": [
@@ -138,7 +142,7 @@ No body is needed
         {
             "id": "the bill id",
             "description": "the bill description",
-            "status": "CLOSED",
+            "status": "PAID",
             "tags": [ "tag1", "tag2" ],
             "paymentDetails": {
                 "amount": "200.00",
@@ -160,7 +164,7 @@ No body is needed
         {
             "id": "the bill id",
             "description": "the bill description",
-            "status": "OPENED|CLOSED",
+            "status": "PENDING|PAID",
             "tags": [ "tag1", "tag2" ],
             "paymentDetails": {
                 "amount": "200.00",
@@ -184,7 +188,7 @@ No body is needed
             {
                 "id": "the bill id",
                 "description": "the bill description",
-                "status": "OPENED|CLOSED",
+                "status": "PENDING|PAID",
                 "tags": [ "tag1", "tag2" ],
                 "paymentDetails": {
                     "amount": "200.00",
@@ -196,3 +200,4 @@ No body is needed
 ]
 ```
 
+# The database model
