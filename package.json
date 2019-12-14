@@ -19,6 +19,7 @@
   "license": "ISC",
   "homepage": "https://github.com/JoaoPedroMedeiros/the-payment-assistant-core#readme",
   "dependencies": {
+    "@google-cloud/pubsub": "^1.1.6",
     "express": "^4.16.3",
     "typescript": "^3.7.3"
   },

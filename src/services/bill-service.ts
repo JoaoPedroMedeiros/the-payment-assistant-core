@@ -1,5 +1,0 @@
-class BillService {
-
-}
-
-export = BillService
